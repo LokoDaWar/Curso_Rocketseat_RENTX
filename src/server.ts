@@ -3,11 +3,12 @@ import express, { NextFunction, Request, Response } from "express";
 import "express-async-errors";
 import swaggerUi from "swagger-ui-express";
 import "./database";
-import "./shared/container";
+import "@shared/container";
 
 import { createConnection } from "typeorm";
 
-import { AppError } from "./errors/AppError";
+import { AppError } from "@errors/AppError";
+
 import { router } from "./routes";
 import swaggerFile from "./swagger.json";
 
